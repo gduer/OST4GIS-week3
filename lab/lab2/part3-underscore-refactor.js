@@ -27,11 +27,23 @@
   // Mock user input
   // Filter out according to these zip codes:
   var acceptedZipcodes = [19106, 19107, 19124, 19111, 19118];
+
+  var filteredZipcodes = _.filter(schools,function(x){return acceptedZipcodes.indexOf(x.ZIPCODE) >= 0;});
+
   // Filter according to enrollment that is greater than this variable:
   var minEnrollment = 300;
 
+  var filteredEnrollment = _.filter(schools,function(x){return x.ENROLLMENT > minEnrollment;});
+
+
 
   // clean data
+
+
+  var data = _.each(schools,
+
+
+
   for (var i = 0; i < schools.length - 1; i++) {
     // If we have '19104 - 1234', splitting and taking the first (0th) element
     // as an integer should yield a zip in the format above
